@@ -1,0 +1,3 @@
+flask
+numpy
+llama-cpp-python
