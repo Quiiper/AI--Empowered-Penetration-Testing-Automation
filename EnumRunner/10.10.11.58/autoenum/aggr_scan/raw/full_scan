@@ -1,0 +1,101 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-04-12 18:02 CET
+NSE: Loaded 157 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+Initiating NSE at 18:02
+Completed NSE at 18:02, 0.00s elapsed
+Initiating SYN Stealth Scan at 18:02
+Scanning 10.10.11.58 [65535 ports]
+Discovered open port 22/tcp on 10.10.11.58
+Discovered open port 80/tcp on 10.10.11.58
+Warning: 10.10.11.58 giving up on port because retransmission cap hit (1).
+Increasing send delay for 10.10.11.58 from 0 to 5 due to 440 out of 1099 dropped probes since last increase.
+Increasing send delay for 10.10.11.58 from 5 to 10 due to 32 out of 79 dropped probes since last increase.
+SYN Stealth Scan Timing: About 6.60% done; ETC: 18:10 (0:07:18 remaining)
+SYN Stealth Scan Timing: About 9.28% done; ETC: 18:13 (0:09:56 remaining)
+SYN Stealth Scan Timing: About 12.25% done; ETC: 18:14 (0:10:52 remaining)
+SYN Stealth Scan Timing: About 20.16% done; ETC: 18:16 (0:11:33 remaining)
+SYN Stealth Scan Timing: About 34.06% done; ETC: 18:18 (0:10:47 remaining)
+SYN Stealth Scan Timing: About 42.02% done; ETC: 18:19 (0:09:57 remaining)
+SYN Stealth Scan Timing: About 48.29% done; ETC: 18:19 (0:09:04 remaining)
+SYN Stealth Scan Timing: About 53.91% done; ETC: 18:19 (0:08:11 remaining)
+SYN Stealth Scan Timing: About 59.59% done; ETC: 18:20 (0:07:16 remaining)
+SYN Stealth Scan Timing: About 65.21% done; ETC: 18:20 (0:06:21 remaining)
+SYN Stealth Scan Timing: About 70.47% done; ETC: 18:20 (0:05:26 remaining)
+SYN Stealth Scan Timing: About 75.77% done; ETC: 18:20 (0:04:29 remaining)
+SYN Stealth Scan Timing: About 81.12% done; ETC: 18:20 (0:03:30 remaining)
+SYN Stealth Scan Timing: About 86.41% done; ETC: 18:20 (0:02:33 remaining)
+SYN Stealth Scan Timing: About 91.73% done; ETC: 18:21 (0:01:35 remaining)
+Stats: 0:17:35 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 91.89% done; ETC: 18:21 (0:01:33 remaining)
+SYN Stealth Scan Timing: About 96.95% done; ETC: 18:21 (0:00:35 remaining)
+Completed SYN Stealth Scan at 18:22, 1231.50s elapsed (65535 total ports)
+Initiating Service scan at 18:22
+Scanning 2 services on 10.10.11.58
+Stats: 0:20:38 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 50.00% done; ETC: 18:22 (0:00:06 remaining)
+Completed Service scan at 18:22, 6.47s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against 10.10.11.58
+Initiating Traceroute at 18:22
+Completed Traceroute at 18:22, 0.20s elapsed
+NSE: Script scanning 10.10.11.58.
+Initiating NSE at 18:22
+Completed NSE at 18:22, 6.34s elapsed
+Initiating NSE at 18:22
+Completed NSE at 18:22, 0.93s elapsed
+Initiating NSE at 18:22
+Completed NSE at 18:22, 0.01s elapsed
+Nmap scan report for 10.10.11.58
+Host is up (0.21s latency).
+Not shown: 64115 closed tcp ports (reset), 1418 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 97:2a:d2:2c:89:8a:d3:ed:4d:ac:00:d2:1e:87:49:a7 (RSA)
+|   256 27:7c:3c:eb:0f:26:e9:62:59:0f:0f:b1:38:c9:ae:2b (ECDSA)
+|_  256 93:88:47:4c:69:af:72:16:09:4c:ba:77:1e:3b:3b:eb (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-favicon: Unknown favicon MD5: 3836E83A3E835A26D789DDA9E78C5510
+| http-robots.txt: 22 disallowed entries (15 shown)
+| /core/ /profiles/ /README.md /web.config /admin 
+| /comment/reply /filter/tips /node/add /search /user/register 
+|_/user/password /user/login /user/logout /?q=admin /?q=comment/reply
+|_http-generator: Backdrop CMS 1 (https://backdropcms.org)
+| http-git: 
+|   10.10.11.58:80/.git/
+|     Git repository found!
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|_    Last commit message: todo: customize url aliases.  reference:https://docs.backdro...
+|_http-title: Home | Dog
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+Device type: general purpose
+Running: Linux 5.X
+OS CPE: cpe:/o:linux:linux_kernel:5
+OS details: Linux 5.0 - 5.14
+Uptime guess: 6.846 days (since Sat Apr  5 22:04:11 2025)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 143/tcp)
+HOP RTT       ADDRESS
+1   198.14 ms 10.10.14.1
+2   198.41 ms 10.10.11.58
+
+NSE: Script Post-scanning.
+Initiating NSE at 18:22
+Completed NSE at 18:22, 0.00s elapsed
+Initiating NSE at 18:22
+Completed NSE at 18:22, 0.00s elapsed
+Initiating NSE at 18:22
+Completed NSE at 18:22, 0.00s elapsed
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1248.14 seconds
+           Raw packets sent: 75694 (3.331MB) | Rcvd: 72574 (2.915MB)

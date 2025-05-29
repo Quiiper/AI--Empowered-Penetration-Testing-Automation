@@ -1,0 +1,24 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-04-12 17:46 CET
+Nmap scan report for 10.10.11.58
+Host is up (0.39s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http    Apache httpd 2.4.41 ((Ubuntu))
+4444/tcp open  krb524?
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 215.55 seconds
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-04-12 17:52 CET
+Nmap scan report for 10.10.11.58
+Host is up (0.31s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http       Apache httpd 2.4.41 ((Ubuntu))
+4444/tcp open  tcpwrapped
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 607.53 seconds

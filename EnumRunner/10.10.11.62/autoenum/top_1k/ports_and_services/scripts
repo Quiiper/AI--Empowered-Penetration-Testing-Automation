@@ -1,0 +1,13 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-04-12 17:29 CET
+Nmap scan report for 10.10.11.62
+Host is up (0.090s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+| ssh-hostkey: 
+|   3072 b5:b9:7c:c4:50:32:95:bc:c2:65:17:df:51:a2:7a:bd (RSA)
+|   256 94:b5:25:54:9b:68:af:be:40:e1:1d:a8:6b:85:0d:01 (ECDSA)
+|_  256 12:8c:dc:97:ad:86:00:b4:88:e2:29:cf:69:b5:65:96 (ED25519)
+5000/tcp open  upnp
+
+Nmap done: 1 IP address (1 host up) scanned in 17.56 seconds
