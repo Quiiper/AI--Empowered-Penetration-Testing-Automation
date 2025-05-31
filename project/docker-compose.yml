@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  keystone-app:
+    build: .
+    ports:
+      - "5000:5000"
+      - "4444:4444"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/dist
+      - /app/__pycache__
+      - /app/*.pyc
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+      - DATABASE_PATH=/app/data/chat.db
+    restart: unless-stopped

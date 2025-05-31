@@ -9,8 +9,25 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/chat': 'http://localhost:5000',
-      '/clear': 'http://localhost:5000'
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/auth': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/chat': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      }
+    }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
     }
   }
 });

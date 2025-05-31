@@ -1,3 +1,5 @@
-flask
-numpy
-llama-cpp-python
+flask==3.0.2
+llama-cpp-python==0.2.27
+flask-cors==4.0.0
+python-dotenv==1.0.1
+db-sqlite3
