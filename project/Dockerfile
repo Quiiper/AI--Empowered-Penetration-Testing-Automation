@@ -31,6 +31,7 @@ RUN apt-get update && apt-get install -y \
     apt-utils \
     curl \
     wget \
+    7z \
     build-essential \
     python3-dev \
     gnupg2 \
@@ -53,6 +54,7 @@ RUN apt-get update && apt-get install -y \
     sqlmap \
     gobuster \
     dirb \
+    netexec \
     netcat-traditional \
     aircrack-ng \
     tshark \
@@ -84,6 +86,8 @@ RUN cd /opt && \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir impacket
+RUN pip install --no-cache-dir certipy-ad
+RUN pip install --no-cache-dir bloodyAD
 
 # Set working directory
 WORKDIR /app
