@@ -33,12 +33,12 @@ fi
 
 if [ ! -x "$(command -v snmp-check)" ];then
         echo "[+] snmp-check not detected. Installing..."
-        sudo apt-get install snmp-check -y > installing;rm installing
+        sudo apt-get install snmpcheck -y > installing;rm installing
 fi
 
 if [ ! -x "$(command -v snmpwalk)" ];then
         echo "[+] snmpwalk not detected. Installing..."
-        sudo apt-get install snmpwalk -y > installing;rm installing
+        sudo apt-get install snmp -y > installing;rm installing
 fi
 
 if [ ! -x "$(command -v fierce)" ];then
