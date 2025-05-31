@@ -39,10 +39,13 @@ RUN apt-get update && apt-get install -y \
     ruby-dev \
     bundler \
     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list.d/kali.list \
+    && wget -q -O /etc/apt/trusted.gpg.d/kali-archive-keyring.gpg https://archive.kali.org/archive-keyring.gpg \
     && apt-get update \
     && apt-get install -y \
     nodejs \
     nmap \
+    dnsrecon \
     john \
     john-data \
     hashcat \
